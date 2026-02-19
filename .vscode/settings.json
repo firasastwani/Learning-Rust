@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.diagnostics.enable": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true
+}
