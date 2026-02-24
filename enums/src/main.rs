@@ -17,9 +17,25 @@ impl Message {
     }
 }
 
-fn route(ip_kin: IpAddrKind) {
-
+enum Coin {
+    Penny, 
+    Nickle, 
+    Dime,
+    Quarter,
 }
+
+impl Coin {
+    
+    fn value_in_cents(&self) -> i8 {
+        match self {
+            Coin::Penny => 1,
+            Coin::Nickle => 5,
+            Coin::Dime => 10,
+            Coin::Quarter => 25,
+        }
+    }
+}
+
 
 fn main() {
 
@@ -49,7 +65,9 @@ fn main() {
     let sum = match y {
         Some(v) => v + x,
         None => panic!("why was none"),
-    }
+    };
+
+    let q: Coin = Coin::Quarter; 
 
 
     // the type of option needs to be specified
